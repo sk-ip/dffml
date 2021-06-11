@@ -74,7 +74,7 @@ class TestScikitClassification(AsyncTestCase):
         await CLI.cli(
             "accuracy",
             "-scorer",
-            "mse",
+            "skmodelscore",
             "-model",
             "scikitsvc",
             *features,
@@ -177,7 +177,7 @@ class TestScikitRegression(AsyncTestCase):
         await CLI.cli(
             "accuracy",
             "-scorer",
-            "mse",
+            "skmodelscore",
             "-model",
             "scikitridge",
             *features,
@@ -326,7 +326,7 @@ class TestScikitClustering(AsyncTestCase):
                     [
                         "accuracy",
                         "-scorer",
-                        "mse",
+                        "skmodelscore",
                         "-model",
                         model,
                         *features,
