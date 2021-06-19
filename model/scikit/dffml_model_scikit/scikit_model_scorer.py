@@ -28,7 +28,7 @@ class SklearnModelAccuracyContext(AccuracyContext):
         ydata = []
         target = []
         estimator_type = mctx.clf._estimator_type
-        
+
         if estimator_type in ("classifier", "regressor"):
             async for record in sctx.with_features(
                 mctx.features + [mctx.parent.config.predict.name]
@@ -70,7 +70,9 @@ class SklearnModelAccuracyContext(AccuracyContext):
                     mctx.logger.critical(
                         "Accuracy found transductive clusterer, ensure data being passed is training data"
                     )
-                    mctx.confidence = mutual_info_score(ydata, mctx.clf.labels_)
+                    mctx.confidence = mutual_info_score(
+                        ydata, mctx.clf.labels_
+                    )
             else:
                 if hasattr(mctx.clf, "predict"):
                     # xdata can be training data or unseen data

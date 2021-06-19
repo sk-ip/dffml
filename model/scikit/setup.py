@@ -96,6 +96,6 @@ setup(
         ],
         "dffml.accuracy": [
             "skmodelscore = dffml_model_scikit.scikit_model_scorer:SklearnModelAccuracy",
-        ]
+        ],
     },
 )

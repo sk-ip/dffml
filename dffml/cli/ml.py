@@ -70,12 +70,10 @@ class Accuracy(MLCMD):
 @config
 class PredictAllConfig(MLCMDConfig):
     update: bool = field(
-        "Update record with sources",
-        default=False,
+        "Update record with sources", default=False,
     )
     pretty: bool = field(
-        "Outputs data in tabular form",
-        default=False,
+        "Outputs data in tabular form", default=False,
     )
 
 
