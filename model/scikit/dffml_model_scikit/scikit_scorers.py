@@ -35,7 +35,10 @@ from sklearn.metrics import (
 
 from dffml.util.entrypoint import entrypoint
 
-from .scikit_base import ScikitScorerContext, ScikitScorer
+from dffml_model_scikit.scikit_scorer_base import (
+    ScikitScorerContext,
+    ScikitScorer,
+)
 
 for entrypoint_name, name, cls in (
     ("acscore", "AccuracyScore", accuracy_score,),
@@ -84,22 +87,15 @@ for entrypoint_name, name, cls in (
     parentContext = ScikitScorerContext
     parentScorer = ScikitScorer
 
-    dffml_config = make_config_numpy(name + "ScorerConfig", cls, properties={})
-
     dffml_cls_ctx = type(name + "ScorerContext", (parentContext,), {},)
 
     dffml_cls = type(
         name + "Scorer",
         (parentScorer,),
-        {
-            "CONFIG": dffml_config,
-            "CONTEXT": dffml_cls_ctx,
-            "SCIKIT_SCORER": cls,
-        },
+        {"CONTEXT": dffml_cls_ctx, "SCIKIT_SCORER": cls,},
     )
     # Add the ENTRY_POINT_ORIG_LABEL
     dffml_cls = entrypoint(entrypoint_name)(dffml_cls)
 
-    setattr(sys.modules[__name__], dffml_config.__qualname__, dffml_config)
     setattr(sys.modules[__name__], dffml_cls_ctx.__qualname__, dffml_cls_ctx)
     setattr(sys.modules[__name__], dffml_cls.__qualname__, dffml_cls)

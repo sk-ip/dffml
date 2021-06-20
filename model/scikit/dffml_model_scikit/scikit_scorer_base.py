@@ -10,7 +10,7 @@ from dffml.source.source import SourcesContext
 from dffml.accuracy import AccuracyScorer, AccuracyContext
 
 
-class ScikitScorerConfig(NamedTuple):
+class ScikitScorerConfig:
     pass
 
 
