@@ -95,15 +95,22 @@ for entrypoint_name, name, cls in (
     parentContext = ScikitScorerContext
     parentScorer = ScikitScorer
 
+    dffml_config = make_config_numpy(name + "ScorerConfig", cls, properties={})
+
     dffml_cls_ctx = type(name + "ScorerContext", (parentContext,), {},)
 
     dffml_cls = type(
         name + "Scorer",
         (parentScorer,),
-        {"CONTEXT": dffml_cls_ctx, "SCIKIT_SCORER": cls,},
+        {
+            "CONFIG": dffml_config,
+            "CONTEXT": dffml_cls_ctx,
+            "SCIKIT_SCORER": cls,
+        },
     )
     # Add the ENTRY_POINT_ORIG_LABEL
     dffml_cls = entrypoint(entrypoint_name)(dffml_cls)
 
+    setattr(sys.modules[__name__], dffml_config.__qualname__, dffml_config)
     setattr(sys.modules[__name__], dffml_cls_ctx.__qualname__, dffml_cls_ctx)
     setattr(sys.modules[__name__], dffml_cls.__qualname__, dffml_cls)

@@ -18,12 +18,13 @@ class ScikitScorerContext(AccuracyContext):
     def __init__(self):
         super().__init__()
         self.np = importlib.import_module("numpy")
+        self.scorer = None
 
-    async def aenter(self):
-        # initialize the actual scorer here.
-        pass
+    async def __aenter__(self):
+        self.scorer = self.parent.SCIKIT_SCORER
+        return self
 
-    async def aexit(self):
+    async def __aexit__(self, exc_type, exc_value, traceback):
         pass
 
     async def score(self, mctx: ModelContext, sctx: SourcesContext):
@@ -42,8 +43,11 @@ class ScikitScorerContext(AccuracyContext):
 
 
 class ScikitScorer(AccuracyScorer):
-    async def aenter(self):
-        pass
+    def __init__(self, config):
+        super().__init__(config)
 
-    async def aexit(self):
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, exc_type, exc_value, traceback):
         pass
