@@ -37,7 +37,6 @@ from dffml.util.entrypoint import entrypoint
 
 from .scikit_base import ScikitScorerContext, ScikitScorer
 
-# Classification
 for entrypoint_name, name, cls in (
     ("acscore", "AccuracyScore", accuracy_score,),
     ("bacscore", "BalancedAccuracyScore", balanced_accuracy_score,),
@@ -50,11 +49,6 @@ for entrypoint_name, name, cls in (
     ("recallscore", "RecallScore", recall_score,),
     ("Jacscore", "JaccardScore", jaccard_score,),
     ("rocaucscore", "RocAucScore", roc_auc_score,),
-):
-    pass
-
-# Clustering
-for entrypoint_name, name, cls in (
     (
         "adjmutinfoscore",
         "AdjustedMutualInfoScore",
@@ -72,11 +66,6 @@ for entrypoint_name, name, cls in (
     ),
     ("randscore", "RandScore", rand_score,),
     ("vmscore", "VMeasureScore", v_measure_score,),
-):
-    pass
-
-# Regression
-for entrypoint_name, name, cls in (
     ("exvscore", "ExplainedVarianceScore", explained_variance_score,),
     ("maxerr", "MaxError", max_error,),
     ("meanabserr", "MeanAbsoluteError", mean_absolute_error,),
