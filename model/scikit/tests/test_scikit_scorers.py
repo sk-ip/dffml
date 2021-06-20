@@ -19,7 +19,7 @@ class TestScikitModel:
     def setUpClass(cls):
         cls.model_dir = tempfile.TemporaryDirectory()
         cls.features = Features()
-        if cls.MODEL_TYPE is "REGRESSION":
+        if cls.MODEL_TYPE == "REGRESSION":
             cls.features.append(Feature("A", float, 1))
             cls.features.append(Feature("B", float, 1))
             cls.features.append(Feature("C", float, 1))
