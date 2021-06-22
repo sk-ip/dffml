@@ -1,4 +1,5 @@
 import sys
+import functools
 
 from sklearn.metrics import (
     accuracy_score,
@@ -92,7 +93,10 @@ for entrypoint_name, name, method in (
     dffml_cls = type(
         name + "Scorer",
         (parentScorer,),
-        {"CONTEXT": dffml_cls_ctx, "SCIKIT_SCORER": method,},
+        {
+            "CONTEXT": dffml_cls_ctx,
+            "SCIKIT_SCORER": functools.partial(method),
+        },
     )
     # Add the ENTRY_POINT_ORIG_LABEL
     dffml_cls = entrypoint(entrypoint_name)(dffml_cls)

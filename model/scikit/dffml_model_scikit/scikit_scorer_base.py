@@ -4,6 +4,7 @@
 Base class for Scikit scorers
 """
 import importlib
+import functools
 
 from dffml.base import config
 from dffml.model.model import ModelContext
@@ -19,6 +20,7 @@ class ScikitScorerConfig:
 class ScikitScorerContext(AccuracyContext):
     def __init__(self, parent):
         super().__init__(parent)
+        # avoid
         self.np = importlib.import_module("numpy")
         self.scorer = None
 
@@ -27,7 +29,6 @@ class ScikitScorerContext(AccuracyContext):
         return self
 
     async def __aexit__(self, exc_type, exc_value, traceback):
-        self.scorer = None
         pass
 
     async def score(self, mctx: ModelContext, sctx: SourcesContext):
