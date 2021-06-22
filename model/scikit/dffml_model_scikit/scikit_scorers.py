@@ -40,7 +40,7 @@ from dffml_model_scikit.scikit_scorer_base import (
     ScikitScorer,
 )
 
-for entrypoint_name, name, cls in (
+for entrypoint_name, name, method in (
     ("acscore", "AccuracyScore", accuracy_score,),
     ("bacscore", "BalancedAccuracyScore", balanced_accuracy_score,),
     ("topkscore", "TopKAccuracyScore", top_k_accuracy_score,),
@@ -92,7 +92,7 @@ for entrypoint_name, name, cls in (
     dffml_cls = type(
         name + "Scorer",
         (parentScorer,),
-        {"CONTEXT": dffml_cls_ctx, "SCIKIT_SCORER": cls,},
+        {"CONTEXT": dffml_cls_ctx, "SCIKIT_SCORER": method,},
     )
     # Add the ENTRY_POINT_ORIG_LABEL
     dffml_cls = entrypoint(entrypoint_name)(dffml_cls)
