@@ -194,6 +194,9 @@ def convert_value(arg, value):
                 and isinstance(value, dict)
             ):
                 value = type_cls(**value)
+            elif arg.annotation is dict and isinstance(value, dict):
+                for key, val in value.items():
+                    value[key] = convert_value(mkarg(key), val)
             else:
                 convert = True
                 # Try to see if the value is of the type it's supposed to be

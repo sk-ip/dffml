@@ -1,0 +1,85 @@
+key,tag,city,month,population,sales,state,temperature
+23,untagged,Orlando city,8,287442,337737,Florida,83.8
+48,untagged,Seattle city,4,753675,87367,Washington,52.3
+49,untagged,Chicago city,4,0,12000,Illinois,48.4
+24,untagged,Las Vegas city,12,651319,77131,Nevada,49.2
+25,untagged,Miami city,11,467963,58796,Florida,77.4
+50,untagged,Portland city (pt.),5,1792,12179,Oregon,60.4
+26,untagged,Orlando city,9,287442,40744,Florida,81.6
+51,untagged,Miami city,3,467963,58796,Florida,77.2
+27,untagged,Phoenix city,11,1680992,180099,Arizona,67.8
+52,untagged,Phoenix city,2,1680992,180099,Arizona,58.9
+28,untagged,Chicago city,1,0,12000,Illinois,30.2
+53,untagged,Portland city (pt.),6,1792,64972,Oregon,64.2
+29,untagged,Orlando city,10,287442,40744,Florida,79.0
+54,untagged,Seattle city,5,753675,87367,Washington,59.3
+30,untagged,Seattle city,1,753675,87367,Washington,45.1
+55,untagged,Orlando city,3,287442,40744,Florida,72.6
+31,untagged,Miami city,12,467963,58796,Florida,69.4
+56,untagged,Portland city (pt.),7,1792,69772,Oregon,70.2
+32,untagged,Orlando city,11,287442,40744,Florida,73.0
+57,untagged,Miami city,4,467963,58796,Florida,81.9
+33,untagged,Phoenix city,12,1680992,180099,Arizona,55.8
+58,untagged,Chicago city,5,0,12000,Illinois,59.9
+34,untagged,Chicago city,2,0,12000,Illinois,30.3
+59,untagged,Portland city (pt.),8,1792,70492,Oregon,71.1
+60,untagged,Seattle city,6,753675,739747,Washington,61.8
+35,untagged,Orlando city,12,287442,40744,Florida,59.3
+36,untagged,Seattle city,2,753675,87367,Washington,43.6
+61,untagged,Phoenix city,3,1680992,180099,Arizona,64.4
+37,untagged,Orlando city,1,287442,40744,Florida,63.4
+62,untagged,Portland city (pt.),9,1792,12179,Oregon,67.4
+38,untagged,Portland city (pt.),1,1792,12179,Oregon,45.8
+63,untagged,Miami city,5,467963,58796,Florida,79.4
+39,untagged,Miami city,1,467963,58796,Florida,71.5
+64,untagged,Orlando city,4,287442,40744,Florida,75.0
+40,untagged,Chicago city,3,0,12000,Illinois,42.8
+65,untagged,Portland city (pt.),10,1792,12179,Oregon,56.1
+41,untagged,Portland city (pt.),2,1792,12179,Oregon,44.0
+66,untagged,Seattle city,7,753675,743907,Washington,67.0
+42,untagged,Seattle city,3,753675,87367,Washington,44.8
+67,untagged,Chicago city,6,0,71200,Illinois,74.0
+43,untagged,Phoenix city,1,1680992,180099,Arizona,56.9
+68,untagged,Portland city (pt.),11,1792,12179,Oregon,46.4
+44,untagged,Portland city (pt.),3,1792,12179,Oregon,46.4
+69,untagged,Miami city,6,467963,500206,Florida,84.4
+45,untagged,Orlando city,2,287442,40744,Florida,66.4
+70,untagged,Phoenix city,4,1680992,180099,Arizona,74.2
+46,untagged,Portland city (pt.),4,1792,12179,Oregon,54.5
+71,untagged,Portland city (pt.),12,1792,12179,Oregon,43.9
+47,untagged,Miami city,2,467963,58796,Florida,73.1
+72,untagged,Seattle city,8,753675,744627,Washington,67.9
+73,untagged,Orlando city,5,287442,40744,Florida,76.6
+74,untagged,Las Vegas city,1,651319,77131,Nevada,49.9
+0,untagged,Las Vegas city,5,651319,77131,Nevada,81.0
+75,untagged,Seattle city,9,753675,87367,Washington,65.5
+1,untagged,Las Vegas city,6,651319,667467,Nevada,87.7
+76,untagged,Chicago city,7,0,75360,Illinois,79.2
+2,untagged,Las Vegas city,7,651319,674107,Nevada,95.6
+77,untagged,Las Vegas city,2,651319,77131,Nevada,53.7
+3,untagged,Las Vegas city,8,651319,674667,Nevada,96.2
+78,untagged,Miami city,7,467963,500846,Florida,85.9
+4,untagged,Las Vegas city,9,651319,77131,Nevada,87.3
+79,untagged,Phoenix city,5,1680992,180099,Arizona,86.2
+5,untagged,Chicago city,10,0,12000,Illinois,51.5
+80,untagged,Las Vegas city,3,651319,77131,Nevada,58.6
+6,untagged,Phoenix city,7,1680992,1604012,Arizona,98.9
+81,untagged,Miami city,8,467963,501726,Florida,85.3
+7,untagged,Phoenix city,8,1680992,1604172,Arizona,99.1
+82,untagged,Orlando city,6,287442,336537,Florida,82.4
+8,untagged,Las Vegas city,10,651319,77131,Nevada,75.1
+83,untagged,Las Vegas city,4,651319,77131,Nevada,69.0
+9,untagged,Chicago city,8,0,73440,Illinois,76.8
+10,untagged,Seattle city,10,753675,87367,Washington,54.3
+11,untagged,Chicago city,11,0,12000,Illinois,47.4
+12,untagged,Las Vegas city,11,651319,77131,Nevada,59.1
+13,untagged,Miami city,9,467963,58796,Florida,83.8
+14,untagged,Phoenix city,6,1680992,1598492,Arizona,92.0
+15,untagged,Chicago city,12,0,12000,Illinois,32.9
+16,untagged,Seattle city,11,753675,87367,Washington,46.3
+17,untagged,Orlando city,7,287442,337737,Florida,83.8
+18,untagged,Phoenix city,9,1680992,180099,Arizona,91.5
+19,untagged,Miami city,10,467963,58796,Florida,82.2
+20,untagged,Chicago city,9,0,12000,Illinois,66.3
+21,untagged,Phoenix city,10,1680992,180099,Arizona,80.9
+22,untagged,Seattle city,12,753675,87367,Washington,44.4

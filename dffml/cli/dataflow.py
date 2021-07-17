@@ -647,6 +647,29 @@ class Diagram(CMD):
             print(f"end")
 
 
+@config
+class CreateShortConfig:
+    operations: List[str] = field("Operations to create a dataflow for",)
+    inputs: List[str] = field(
+        "inputs given to the operations", default_factory=lambda: []
+    )
+    configloader: BaseConfigLoader = field(
+        "ConfigLoader to use", default=JSONConfigLoader,
+    )
+    ops: Dict[Any, str] = field(
+        "Ooperations to be performed on the given inputs",
+        default_factory=lambda: {},
+    )
+
+
+class CreateShort(CMD):
+
+    CONFIG = CreateShortConfig
+
+    async def run(self):
+        pass
+
+
 # Name collision
 class Dataflow(CMD):
 
@@ -654,3 +677,4 @@ class Dataflow(CMD):
     create = Create
     run = Run
     diagram = Diagram
+    createshort = CreateShort

@@ -1,0 +1,128 @@
+{
+    "definitions": {
+        "get_single_output": {
+            "name": "get_single_output",
+            "primitive": "map"
+        },
+        "get_single_spec": {
+            "name": "get_single_spec",
+            "primitive": "array"
+        },
+        "operations:lookup_population.inputs.city": {
+            "name": "operations:lookup_population.inputs.city",
+            "primitive": "str"
+        },
+        "operations:lookup_population.inputs.state": {
+            "name": "operations:lookup_population.inputs.state",
+            "primitive": "str"
+        },
+        "operations:lookup_temperature.inputs.city": {
+            "name": "operations:lookup_temperature.inputs.city",
+            "primitive": "str"
+        },
+        "operations:lookup_temperature.inputs.month": {
+            "name": "operations:lookup_temperature.inputs.month",
+            "primitive": "int"
+        },
+        "population": {
+            "name": "population",
+            "primitive": "generic"
+        },
+        "temperature": {
+            "name": "temperature",
+            "primitive": "generic"
+        }
+    },
+    "flow": {
+        "get_single": {
+            "inputs": {
+                "spec": [
+                    "seed"
+                ]
+            }
+        },
+        "operations:lookup_population": {
+            "inputs": {
+                "city": [
+                    {
+                        "seed": [
+                            "city"
+                        ]
+                    }
+                ],
+                "state": [
+                    {
+                        "seed": [
+                            "state"
+                        ]
+                    }
+                ]
+            }
+        },
+        "operations:lookup_temperature": {
+            "inputs": {
+                "city": [
+                    {
+                        "seed": [
+                            "city"
+                        ]
+                    }
+                ],
+                "month": [
+                    {
+                        "seed": [
+                            "month"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "linked": true,
+    "operations": {
+        "get_single": {
+            "inputs": {
+                "spec": "get_single_spec"
+            },
+            "name": "get_single",
+            "outputs": {
+                "output": "get_single_output"
+            },
+            "retry": 0,
+            "stage": "output"
+        },
+        "operations:lookup_population": {
+            "inputs": {
+                "city": "operations:lookup_population.inputs.city",
+                "state": "operations:lookup_population.inputs.state"
+            },
+            "name": "operations:lookup_population",
+            "outputs": {
+                "population": "population"
+            },
+            "retry": 0,
+            "stage": "processing"
+        },
+        "operations:lookup_temperature": {
+            "inputs": {
+                "city": "operations:lookup_temperature.inputs.city",
+                "month": "operations:lookup_temperature.inputs.month"
+            },
+            "name": "operations:lookup_temperature",
+            "outputs": {
+                "temperature": "temperature"
+            },
+            "retry": 0,
+            "stage": "processing"
+        }
+    },
+    "seed": [
+        {
+            "definition": "get_single_spec",
+            "value": [
+                "temperature",
+                "population"
+            ]
+        }
+    ]
+}
